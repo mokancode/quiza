@@ -1,0 +1,426 @@
+
+.friendRequestListDivWrapper {
+    /* border: 1px solid black; */
+    
+    
+    position: absolute;
+    transition: 0.4s border-radius, 0.5s max-height;
+    transition-delay: 200ms;
+    top: 10px;
+    left: -350px;
+    overflow-y: hidden;
+    /* overflow-x: hidden; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 10px 0.1px rgb(150, 150, 150);
+    max-height: 000px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    z-index: 1 !important;
+}
+
+div[class="friendRequestListDivWrapper visible"] {
+    max-height: 500px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.friendRequestListDiv {    
+    opacity: .95;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    transition: .2s padding, 0.3s max-height;
+    overflow-y: scroll;
+    /* padding: 10px; */
+    max-height: 275px;
+}
+
+
+/* Scrollbar styling of friend requests list */
+
+/* width */
+.friendRequestListDiv::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+}
+
+/* Track */
+.friendRequestListDiv::-webkit-scrollbar-track {
+    background: #dadada88; 
+    border-radius: 20px;
+}
+
+/* Handle */
+.friendRequestListDiv::-webkit-scrollbar-thumb {
+    background: rgba(190, 190, 190, 0.493); 
+    border-radius: 40px;
+}
+
+/* Handle on hover */
+.friendRequestListDiv::-webkit-scrollbar-thumb:hover {
+    background: rgb(197, 197, 197); 
+    border-radius: 20px;
+}
+
+
+.friendRequestListDivWrapper::before {
+}
+
+.friendRequestListDiv:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.friendRequestList {
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid blue; */
+    list-style-type: none;   
+    /* display: flex; */
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+    flex-direction: column;
+    
+    /* height: 100%; */
+}
+
+.friendRequestElt {
+    padding: 10px;
+    padding-bottom: 0px;
+    /* padding-top: 15px; */
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5px dotted rgb(153, 153, 153);
+    overflow: hidden;
+}
+
+.friendReqEltName {
+    /* border: 1px solid black; */
+    user-select: text;
+    /* border: 1px solid black; */
+    padding: 0 20px;
+}
+
+.AcceptOrRejectButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transform: rotate(45deg);
+    height: 45px;
+    width: 45px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.friendReqEltBtn {
+    height: 45px;
+    width: 25px;
+    outline: none !important;
+    border: none;    
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.friendReqEltBtn span {
+    display: inline-block;
+    transform: rotate(-45deg) !important;
+}
+
+button[class="friendReqEltBtn Reject"] {
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: rgb(47, 47, 66);
+    color: rgb(120, 240, 234);
+    z-index: 6;
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 3px;
+    font-weight: bolder;
+    
+}
+
+button[class~="friendReqEltBtn"]:hover {
+    /* transform: translateY(-3px); */
+    /* transform: scale(1.1,1.1); */
+    
+}
+
+button[class="friendReqEltBtn Accept"] {        
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    /* background-color: rgb(166, 250, 166); */
+    background-color: rgb(120, 240, 234);
+    color: rgb(17, 65, 138);
+    font-weight: bolder;
+    z-index: 6;
+    font-size: 18px;
+    /* box-shadow: -1px 0 3px 1px rgb(94, 197, 192); */
+    box-shadow: -1px 0 1px 0px rgb(90, 180, 202);
+}
+
+button[class="friendReqEltBtn Accept"]:hover {
+    animation-name: AcceptSkew;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    /* animation-direction: alternate; */
+}
+
+
+
+@keyframes AcceptSkew {
+    0% {
+        transform: rotate(0deg) skew(0deg);
+    }
+    25% {
+        transform: rotate(19deg) skew(20deg);
+    }
+    50% {
+        transform: rotate(-19deg) skew(-20deg);
+    }
+    100% {
+        /* background-color: rgb(46, 136, 238); */
+        transform: rotate(0deg) skew(0deg);
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 0px 2px #0400ff, -1px 0px 2px #0400ff;
+        /* border: 1px solid rgb(21, 165, 175); */
+        /* border-left: 0; */
+    }
+}
+
+button[class="friendReqEltBtn Reject"]:hover {
+    animation-name: RejectSkew;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}
+
+@keyframes RejectSkew {
+    0% {
+        /* border-bottom: 1px solid rgb(255, 0, 0); */
+        /* border-right: 1px solid rgb(255, 0, 0); */
+        /* border-top: 1px solid rgb(255, 0, 0); */
+        color: rgb(255, 255, 255);
+        transform: rotate(0deg) skew(0deg);
+        text-shadow: 0px 0px 5px #ff7979;
+        /* background-color: rgb(112, 2, 29); */
+    }
+    25% {
+        transform: rotate(19deg) skew(20deg);
+    }
+    50% {
+        transform: rotate(-19deg) skew(-20deg);
+    }
+    100% {
+        transform: rotate(0deg) skew(0deg);
+        /* background-color: rgb(255, 0, 0); */
+        /* color: rgb(255, 255, 255); */
+    }
+}
+
+
+
+.friendrequestsheaderParent {
+    padding: 10px;
+    padding-bottom: 0px;
+    /* border: 1px solid black; */
+    background-color: white;
+    border-bottom: 1px solid gray;
+    background-color: white;
+}
+#friendrequestsheader {
+}
+
+
+.closingBtn {
+    border-top: .5px solid rgb(177, 177, 177);
+    position: relative;
+    left: 0px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    /* height: fit-content; */
+    padding: 10px;
+    /* padding-bottom: 30px; */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: .2s;
+    background-color: white;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.closingBtn:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.closingBtn:hover > #closeFriendRequestsBtn {
+    /* filter:  invert(.5) sepia(.5) saturate(30) hue-rotate(330deg) contrast(400%) brightness(100%); */
+    /* filter:  invert(.2) sepia(.5) saturate(40) hue-rotate(390deg) contrast(400%) brightness(100%);     */
+    filter:  invert(.5) sepia(.5) saturate(400) hue-rotate(220deg) contrast(100%) brightness(100%);
+    animation-name: pokeUp;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pokeUp {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#closeFriendRequestsBtn {
+    transition: 0.2s;
+    height: 20px;
+    width: auto;
+    /* filter:  invert(.5) sepia(.5) saturate(30) hue-rotate(190deg) contrast(100%) brightness(100%); */
+    filter:  invert(.5) sepia(.5) saturate(400) hue-rotate(200deg) contrast(100%) brightness(60%);
+    opacity: 1;
+}
+
+
+
+.noRequestsCurrently {
+    /* display: none; */
+    position: absolute;
+    left: -145px;
+    width: fit-content;
+    white-space: nowrap;
+    background-color: rgb(134, 201, 255);
+    color: rgb(43, 50, 63);
+    font-weight: 500;
+    padding: 5px 8px;
+    padding-right: 15px;
+    border: 1px solid rgb(9, 113, 117);
+    border-radius: 20px;
+    transition: .1s opacity;
+    opacity: 0;
+    z-index: 2;
+}
+
+span[class="noRequestsCurrently visible"] {
+    display: block; 
+    /* animation-name: popUpNoRequests; */
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+span[class~="noRequestsCurrentlyTriangle"] {
+    opacity: 0;
+    transition: .07s opacity;
+    position: absolute; 
+    top: 7.5px; 
+    left: -23px;
+    width:15px;
+    height:15px;
+    border: 10px solid rgb(134, 201, 255);
+    border-radius: 4px;
+    transform: rotate(135deg);
+    z-index: 3;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-bottom-color: transparent;
+}
+span[class="noRequestsCurrentlyTriangle visible"] {
+    /* background-color: red; */
+    opacity: 1;
+}
+
+
+span[class="noRequestsCurrently visible"]:before {
+    
+    /* content:'';
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: -20%;
+    left: 100%;
+    transform: translateX(-50%) translateY(18px) rotate(-45deg);
+    border-bottom: 3px solid #262626;
+    border-right: 3px solid #262626; */
+    
+    /* opacity: 1;
+    transition: 0.2s;
+    position: absolute;
+    top: 5px;
+    left: 103px;
+    content:"";
+    width:20px;
+    height:20px;
+    margin-top: 2px;
+    margin-left: 10px;
+    border: 7px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    transform: rotate(135deg);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: rgb(134, 201, 255);
+    border-top-color: rgb(134, 201, 255);  */
+    /* z-index: 10;
+    /* background-color: rgb(134, 201, 255); */
+}
+@keyframes popUpNoRequests {
+    0% {
+        opacity: 0;
+    }
+    
+    10% {
+        opacity: 1;
+    }
+    
+    80% {
+        opacity:1;
+    }
+    90%{
+        opacity: 0;
+    }   
+    100% {
+        display: none;
+    }
+}
+
+.friendListUL {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.friendLink {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none !important;
+    color: rgb(0, 12, 53);
+}
+
+.friendElt:hover {
+    background-color: #dadada54;
+}
+
+div[class~="onlineStatus"] {
+    margin-left: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    /* background-color: rgb(255, 40, 40);
+    border: 1px solid rgb(145, 0, 0); */
+}
+
+div[class="onlineStatus online"] {
+    background-color: rgb(43, 255, 0);
+    border: 1px solid rgb(12, 133, 28);
+}

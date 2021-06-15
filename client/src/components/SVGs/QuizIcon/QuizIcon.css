@@ -1,0 +1,100 @@
+.nav-item:nth-child(1) .navbarIconWrapper {
+    /* border: 1px solid white !important; */
+    /* width: 30px; */
+    /* height: 30px; */
+}
+
+.nav-item:nth-child(1) .quizIconSVG {
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    /* border: 3px solid cyan !important; */
+    stroke-dasharray: 1850;
+    /* stroke-dashoffset: 1850; */
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 20px cyan);
+    transition: .8s ease-in-out 0.25s, 0s opacity 0s !important;
+}
+
+.nav-item:nth-child(1):hover .quizIconSVG {
+    transition: .5s ease-in-out !important;
+    stroke-dashoffset: 1850;
+}
+.nav-item:nth-child(1):hover .quizIconPath3 {
+    transition: .5s ease-in-out;
+    stroke-dashoffset: 250;
+}
+
+.nav-item:nth-child(1):hover .quizIconPath2 {
+    transition: .5s ease-in-out;
+    stroke-dashoffset: 410;
+}
+
+
+
+.quizIconPath0{
+    fill:none;
+    /* stroke:rgb(0, 170, 255); */
+    /* stroke:rgb(164, 246, 255); */
+    stroke-width:20 !important;
+    stroke-miterlimit:10;
+}
+
+.quizIconPath0:nth-child(1) {
+    stroke-width:13;
+    /* stroke:rgb(164, 246, 255); */
+    stroke:rgb(193, 215, 223);
+}
+
+.quizIconPath1{
+    fill:none;
+    /* stroke:rgb(139, 207, 250); */
+    stroke:rgb(218, 218, 218);
+    stroke-width:12;
+    stroke-miterlimit:10;
+}
+
+.quizIconPath2{
+    /* display: none; */
+    fill:none;
+    stroke:rgb(143, 194, 213);
+    stroke-width:15;
+    stroke-miterlimit:10;
+    stroke-dasharray: 410;
+    stroke-dashoffset: 0;
+}
+
+.quizIconPath3 {
+    /* display: none; */
+    fill:none;
+    stroke:rgb(148, 241, 222);
+    /* stroke:white; */
+    stroke-width:20;
+    stroke-miterlimit:10;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+    transition: 0.8s 1s;
+}
+
+
+/* 
+    1st box = child 6
+    2nd box = child 4
+    3nd box = child 8
+*/
+
+.quizIconPath2:nth-child(6) {
+    transition: 0.5s 0.3s;
+}
+
+.quizIconPath2:nth-child(4) {
+    transition: 0.5s 0.5s;
+}
+
+.quizIconPath2:nth-child(8) {
+    transition: 0.5s 0.7s;
+}

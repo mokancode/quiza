@@ -1,0 +1,59 @@
+.infoFeedDiv {
+    /* display: none; */
+    position: fixed;
+    /* bottom: 0px; */
+    /* bottom: -50%; */
+    bottom: -200px;
+    left: 25%;
+    width: 50%;
+    height: 100px;
+    height: fit-content;
+    min-height: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+    z-index: 1000000;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 1s ease-in-out;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+    padding: 15px 20px;
+    padding-bottom: 25px;
+    /* bottom: 0px !important; */
+}
+
+.infoFeedDivExtend {
+    bottom: 0px;
+}
+
+.infoFeedDiv p {
+    color: white;
+}
+
+.guideInfoHeader {
+    /* text-decoration: underline; */
+    /* text-decoration-color: rgb(103, 103, 103); */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+    .infoFeedDiv {
+        left: 15%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .infoFeedDiv {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .infoFeedDiv {
+        left: 5%;
+        width: 90%;
+    }
+}

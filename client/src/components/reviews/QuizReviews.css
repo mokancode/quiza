@@ -1,0 +1,822 @@
+.reviewsListDivWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* width: 2000px; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1099;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+  /* border: 2px solid red; */
+}
+
+.reviewsListDiv {
+  /* border: 2px solid yellow !important; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 1%;
+  /* padding-left: 20px;
+    padding-right: 20px !important; */
+  cursor: unset;
+  height: fit-content;
+  min-height: unset !important;
+  /* box-shadow: 0 0 12px 0px rgba(36, 43, 133, 0.8); */
+  /* user-select: none; */
+  /* background: linear-gradient(
+    90deg, 
+    rgba(88, 105, 161, 0.6), 
+    rgba(116, 165, 123, .6), 
+    rgba(116, 165, 123, .2), 
+    rgba(255, 255, 255, 0.6), 
+    rgba(116, 165, 123, .6)
+    ); */
+
+  background: linear-gradient(rgb(240, 240, 240), rgb(169, 169, 169));
+
+  border-radius: 20px;
+  color: rgb(226, 226, 226);
+  font-size: 30px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top: 1px solid gray;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-bottom: 1.5px solid rgb(124, 124, 124);
+  background-size: 1000%;
+  background-position: 0% 50%;
+  min-height: 90% !important;
+  width: 90% !important;
+  position: relative;
+  padding-left: 0 !important;
+}
+
+.reviewsListDiv h1 {
+  color: white;
+}
+
+.reviewsListUL {
+  max-width: 100% !important;
+  list-style-type: none;
+}
+
+.restOfReviewsUL {
+  padding: 0;
+}
+
+/* Review List Item */
+
+.quizReviewListItem {
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  /* border: 1px solid rgb(137, 137, 137); */
+  box-shadow: 0 0 10px 0 rgba(49, 49, 49, 0.3);
+
+  /* max-width: fit-content; */
+
+  word-break: break-all;
+
+  /* border: 3px solid yellow; */
+
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.quizReviewListItemMyReview {
+  border-top-right-radius: 20px !important;
+}
+
+.quizReviewListItem .quizzesAllStarsContainer {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+}
+
+.quizReviewListItem .starsInnerContainer {
+  display: flex;
+  height: fit-content;
+  /* border: 1px solid black; */
+}
+
+.quizReviewListItem .starsInnerContainer .editableStars {
+    /* border: 1px solid blue; */
+    /* width: 200px; */
+    margin-top: 5px;
+    display: flex;
+}
+
+
+.reviewAuthor {
+  font-weight: 500;
+  color: rgb(40, 52, 61);
+  font-size: 0.8em;
+  padding-top: 1px;
+  margin: 0px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.reviewAuthorMobile {
+  display: none;
+}
+
+.reviewDates {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+}
+
+.reviewDates span {
+  font-size: 0.7em;
+  color: rgba(106, 111, 111, 0.6);
+}
+
+.reviewDates span:nth-child(2) {
+  margin-left: 4px;
+  position: absolute;
+  right: -55px;
+}
+
+/* .reviewAuthor {
+    display: none !important;
+}
+
+.reviewAuthorAndDates {
+    display: none !important;
+} */
+
+@media screen and (max-width: 620px) {
+  .reviewAuthorAndDates {
+    display: flex;
+    flex-direction: column;
+    /* word-break: keep-all; */
+    /* display: none; */
+  }
+
+  .reviewAuthor {
+    /* margin-top: 3px;
+        margin-left: 0px; */
+    display: none;
+  }
+
+  .reviewAuthorMobile {
+    margin-top: 3px;
+    margin-left: 0px;
+    display: block;
+    /* border: 2px solid red; */
+  }
+
+  .reviewsListDiv {
+    /* margin-left: 0px; */
+    /* padding-left: 0px !important; */
+  }
+
+  .reviewsListUL {
+    margin-left: 0px;
+    /* padding-left: 10px; */
+    padding-left: 2%;
+  }
+
+  .reviewDates span:nth-child(1) {
+    /* margin-right: 0px; */
+    /* padding-right: 0px; */
+    /* border: 1px solid red; */
+    /* padding: 0 !important; */
+    /* margin: 0 !important; */
+  }
+
+  .reviewLastEditedSpan {
+    /* margin: 0px !important; */
+    /* padding: 0px !important; */
+  }
+
+  /* .quizReviewListItem {
+        min-width: 300px;
+    } */
+}
+
+.reviewContent {
+  margin-top: 20px;
+}
+
+.reviewAuthor::before {
+  /* content: "-"; */
+  margin-right: 5px;
+}
+
+.reviewContentHidden {
+  display: none;
+}
+
+/* .editQuizInputHidden {user-select: none !important;} */
+
+.editReviewDiv {
+  margin-top: 35px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.editReviewDiv textarea {
+  width: 100%;
+  height: 100%;
+  margin: 0px !important;
+  /* padding: 0px !important; */
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  padding: 3px 7px;
+  margin-right: 7px;
+  border-radius: 5px;
+  border: 1px solid rgb(172, 192, 221);
+  transition: 0.2s;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+.editReviewDiv textarea:focus {
+  box-shadow: 0 0 5px 0.5px rgba(19, 10, 153, 0.2);
+  background-color: rgb(249, 250, 255);
+  outline: none;
+}
+
+.editReviewDiv button {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /* border-radius: 8px; */
+  /* margin-top: 3px; */
+  /* width: fit-content; */
+  width: 100%;
+  border: none;
+  outline: none !important;
+  text-transform: uppercase;
+  background: none;
+  color: rgb(44, 44, 44);
+  /* text-shadow: 0 0 1px black; */
+  /* box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3); */
+  border: 1px solid rgb(79, 76, 76);
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  /* font-weight: 500; */
+  transition: 0.15s all, 1s border, 1s border-left, 1s border-right, 1s border-bottom;
+  z-index: 8;
+  border-top: 1px solid lightgrey;
+  /* background-color: rgb(147, 179, 193); */
+  background: linear-gradient(to top, rgb(169, 169, 169, 0.99), rgb(233, 233, 233, 0.99));
+  cursor: pointer;
+  z-index: 2;
+}
+
+.editReviewDiv button:hover {
+  background-color: rgb(166, 196, 209);
+  color: rgb(0, 0, 0);
+  /* transform: scale(1.1,1.1); */
+  /* margin-right: 4px; */
+  /* border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255); */
+}
+
+.editReviewDiv button:active {
+  color: white;
+  text-shadow: 0 0 2px white;
+  /* border-bottom: 1px solid rgb(255, 255, 255); */
+  transition: 0.15s all;
+}
+
+.editReviewDiv .spinnerDelayedDiv {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% + 25px);
+  margin-top: -6px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 255, 0.4)) drop-shadow(0 0 5px rgba(0, 0, 255, 0.4)) drop-shadow(0 0 10px cyan)
+    /* drop-shadow(0 0 10px cyan) */;
+}
+
+.loadingReviewsDiv p {
+  margin-top: 20px;
+  font-weight: 400 !important;
+  color: rgb(155, 155, 155);
+}
+
+.loadingReviewsDiv {
+  color: rgb(238, 247, 255);
+  opacity: 0;
+  animation: 1s showFromRight forwards;
+}
+
+.settingsSavedWrapper .noReviewsYet {
+  cursor: default !important;
+}
+
+.spinnerDivReviews {
+  opacity: 0;
+  animation: 0.5s showFromBottom 0.2s forwards !important;
+}
+
+/* Name Header */
+
+.quizNameReviewsHeaderDiv {
+  position: relative !important;
+  width: 100%;
+  /* border: 1px solid blue; */
+  margin-bottom: 30px;
+  margin-left: 20px;
+  height: fit-content;
+}
+
+.reviewHeaderWrapper {
+  display: flex;
+  display: none;
+  flex-direction: row;
+  /* border: 1px solid red; */
+  transition: 2s all;
+  overflow: hidden;
+  max-width: 0%;
+  /* max-width: fit-content; */
+  /* height: 70% !important; */
+  /* max-height: 70px; */
+  animation: 5s revealFromLeft 0.5s forwards ease-in;
+}
+
+@keyframes revealFromLeft {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+.secondReviewHeader {
+  width: fit-content;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 9 !important;
+  /* display: unset !important; */
+  /* display: none !important; */
+  color: transparent !important;
+  text-shadow: none;
+  white-space: nowrap;
+  display: none;
+}
+
+.quizNameReviewsHeader {
+  z-index: 8;
+  display: inline;
+  opacity: 0;
+  animation: 1s showHeaderFromLeft forwards;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.449);
+  /* position: relative; */
+  /* display: none; */
+
+  /* border: 1px solid white !important; */
+  /* display: none; */
+  color: rgb(32, 32, 32) !important;
+}
+
+.quizNameReviewsHeader span {
+  color: rgb(41, 80, 113) !important;
+  /* font-weight: bold; */
+}
+
+@keyframes showHeaderFromLeft {
+  0% {
+    visibility: collapse;
+    opacity: 0;
+    transform: translateX(-7px);
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.quizNameReviewsHeader::before,
+.quizNameReviewsHeader::after {
+  display: none;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid rgb(139, 210, 255);
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  width: 100%;
+  left: -5%;
+  /* transform: rotateX(180deg); */
+}
+
+.quizNameReviewsHeader::after {
+  display: none;
+  top: 99%;
+  transform: rotateY(180deg) rotateX(180deg);
+  width: 40%;
+  left: 70%;
+  border-bottom-left-radius: 10px;
+}
+
+.quizNameReviewsHeader::first-letter {
+  text-transform: capitalize;
+}
+
+/* Second name header */
+
+.secondReviewHeader {
+  /* border: 1px solid black; */
+}
+
+.secondReviewHeader::after {
+  display: block !important;
+  width: calc(100% + 130px) !important;
+  left: 0 !important;
+}
+
+.secondReviewHeader::before,
+.secondReviewHeader::after {
+  display: none;
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid rgb(24, 87, 126);
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  width: 100%;
+  /* top: 100%; */
+  left: 0%;
+  /* transform: rotateX(180deg); */
+}
+
+.secondReviewHeader::after {
+  /* display: none !important; */
+  top: 98%;
+  transform: rotateY(180deg) rotateX(180deg);
+  width: 40%;
+  left: 70%;
+  border-bottom-left-radius: 10px;
+}
+
+.secondReviewHeader::first-letter {
+  text-transform: capitalize;
+}
+
+.retryBtn {
+  margin-top: 20px;
+  padding: 5px 15px;
+  outline: none !important;
+  border-radius: 30px;
+  color: rgb(41, 41, 41);
+
+  background: linear-gradient(
+    90deg,
+    rgba(93, 88, 161, 0.5),
+    rgba(116, 165, 123, 0.2),
+    rgba(255, 255, 0, 0.2),
+    rgba(116, 165, 123, 0.15),
+    rgba(255, 255, 255, 0.1),
+    rgba(116, 165, 123, 0.2)
+  );
+  background-size: 1000%;
+  background-position: 0% 50%;
+
+  border-top: 1px solid rgb(110, 110, 110);
+  border-right: 1px solid rgb(224, 224, 224);
+  border-left: 1px solid rgb(224, 224, 224);
+  border-bottom: 1px solid rgb(81, 81, 81);
+  box-shadow: 0 0 12px 0px rgb(0, 0, 0, 0.05), 5px 0 12px 0px rgb(0, 0, 0, 0.2), -5px 0 12px 0px rgb(0, 0, 0, 0.2);
+}
+.retryBtn:active {
+  border-radius: 30px;
+  border-top: 1px solid rgb(186, 186, 186);
+  /* border-right: 1px solid gray; */
+  /* border-left: 1px solid gray; */
+}
+
+.closeReviewsBtn {
+  position: absolute;
+  z-index: 5 !important;
+  top: 0;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 10px;
+  width: 30px !important;
+  height: 25px !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3) !important;
+  background: linear-gradient(0deg, rgba(195, 201, 230, 0.99) 20%, rgba(153, 164, 206, 0.99)) !important;
+  border: 1px solid rgb(107, 107, 108) !important;
+  border-left: 1px solid rgb(157, 157, 157) !important;
+  border-right: 1px solid rgb(157, 157, 157) !important;
+  user-select: none !important;
+}
+
+.closeReviewsBtn:hover {
+  border: 1px solid rgb(194, 194, 194);
+  border-top: 1px solid rgb(112, 112, 112);
+  box-shadow: 0 -1px 3px 0px rgba(0, 0, 0, 0.9);
+}
+
+.closeReviewsBtn:active {
+  transition: 0.1s all;
+  color: white;
+  text-shadow: 0 0px 5px rgb(240, 244, 255);
+  box-shadow: 0 -1px 2px 0px rgba(0, 0, 0, 0.6);
+}
+
+.reloadPageSpan {
+  cursor: pointer !important;
+  transition: 0.3s all;
+  user-select: none;
+}
+
+.reloadPageSpan:hover {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.265);
+  background-color: rgb(238, 238, 238);
+}
+
+/* Edit quiz */
+
+.editQuizHeader {
+  color: rgb(60, 79, 125);
+  font-size: 20px;
+  /* text-shadow: 0 0 3px black; */
+}
+
+.editQuiz {
+  background: linear-gradient(0deg, rgb(223, 223, 223) 20%, rgb(198, 195, 195) 80%) !important;
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.4) !important;
+  /* border:  */
+}
+
+.editReviewInput {
+  font-size: 17px;
+}
+
+.editReviewQuestionLengthCountLeft {
+  font-size: 16px;
+}
+
+.editReviewSubmit {
+  background: linear-gradient(0deg, rgba(80, 82, 85, 0.4) 20%, rgba(200, 205, 211, 0.8) 120%);
+  color: rgb(36, 36, 36);
+  text-shadow: 0 0 3px rgba(63, 63, 63, 0.99);
+}
+
+.editReviewSubmit:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* Edit / Delete Review Buttons */
+
+.myReviewBtnDivWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+  right: -20px;
+  /* margin-right: -20px; */
+  /* margin-top: -10px; */
+  /* margin-left: 15px; */
+  perspective: 200px;
+  /* border: 3px solid red; */
+}
+
+.quizReviewListItem .starsAndBtnsRow {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+}
+
+.myReviewBtnDiv {
+  cursor: pointer;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(gray, lightgray); */
+  background: linear-gradient(rgb(169, 169, 169), rgb(233, 233, 233));
+  transition: 0.3s all;
+  /* border: 3px solid black; */
+}
+
+.myReviewBtnDiv * {
+  cursor: pointer;
+}
+
+.myReviewBtn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.editMyReviewBtnDiv {
+  border-radius: 0 20px;
+  border-top-right-radius: 0;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-left: 1px solid gray;
+}
+
+.deleteMyReviewBtnDiv {
+  border-radius: 0 20px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 20px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-left: 1px dotted rgb(42, 42, 42);
+}
+
+.myReviewBtn {
+  border-radius: 10px;
+  border: none;
+  outline: none !important;
+  text-transform: uppercase;
+  background: none;
+  color: rgb(44, 44, 44);
+  /* text-shadow: 0 0 1px black; */
+  /* font-weight: 500; */
+  /* transition: 0.15s all; */
+  z-index: 8;
+  white-space: pre;
+}
+
+.editMyReviewBtnDiv:hover {
+  box-shadow: 0px 3px 9px 0 rgba(0, 0, 0, 0.5);
+  transform: rotateY(20deg) translateX(3px) translateY(-1px) scale(1.04, 1.1);
+  z-index: 9 !important;
+}
+
+.deleteMyReviewBtnDiv:hover {
+  transform: rotateY(-20deg) translateX(-7px) translateY(-1px) scale(1, 1.1);
+  box-shadow: -5px 3px 5px 0 rgba(0, 0, 0, 0.3);
+  z-index: 9 !important;
+}
+
+.myReviewBtnDiv:active .myReviewBtn {
+  transition: 0s all;
+  color: white;
+  text-shadow: 0 0 3px white;
+}
+
+.editQuizReviewBtn {
+  padding-left: 40px;
+  margin-left: -30px;
+
+  padding-right: 10px;
+  margin-right: -10px;
+  /* background: radial-gradient(center, ellipse cover, rgb(126, 192, 247) 0%, rgb(105, 113, 130) 73%); */
+  /* border: 1px solid red; */
+}
+.deleteQuizReviewBtn {
+  padding-left: 40px;
+  margin-left: -30px;
+
+  padding-right: 15px;
+  margin-right: -10px;
+  /* background: radial-gradient(center, ellipse cover, rgb(126, 192, 247) 0%, rgb(105, 113, 130) 73%); */
+  /* border: 1px solid blue; */
+}
+
+.editReviewIcon {
+  height: 25px;
+  width: auto;
+}
+.deleteReviewIcon {
+  height: 25px;
+  width: auto;
+}
+
+.loadMoreReviews {
+  background-color: black;
+  border: 1px solid transparent;
+  border: none;
+  transition: 0.3s all !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 0 1px 2px white;
+}
+
+.loadMoreReviews:hover {
+  border: unset !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 0 1px 2px white;
+}
+
+.loadMoreReviews:active {
+  border: unset !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6), 0 0 1px 2px white !important;
+}
+
+@media screen and (max-width: 420px) {
+  .reviewsListDivWrapper {
+    padding: 5px;
+    /* border: 2px solid red; */
+  }
+
+  .reviewsListDiv {
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 100% !important;
+    /* border: 2px solid red; */
+    padding-left: 0 !important;
+  }
+
+  .quizReviewListItem {
+    word-break: break-all;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-left: 0;
+    /* border: 3px solid yellow; */
+  }
+
+  .reviewsListUL {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 100%;
+  }
+
+  .starsAndBtnsRow {
+    flex-direction: column;
+    /* border: 1px solid black; */
+  }
+
+  .starsInnerContainer {
+    /* display: none; */
+    /* border: 1px solid black; */
+    order: 2;
+    /* display: none; */
+  }
+
+  .reviewAuthor {
+    /* border: 1px solid red; */
+    /* display: none; */
+    order: 1;
+  }
+
+  .reviewsListDivWrapper .quizzesAllStarsContainer {
+    flex-direction: column;
+    /* display: none; */
+    order: 2;
+    /* border: 2px solid red; */
+    position: relative;
+  }
+
+  .myReviewBtnDivWrapper {
+    justify-content: flex-end;
+    /* border: 2px solid black; */
+    order: 1;
+  }
+
+  .reviewAuthor {
+    margin-left: 0px;
+  }
+
+  .restOfReviewsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .loadMoreReviews {
+    margin-top: 10px;
+  }
+}
+
+.quizReviewListItemMyReview #updateError {
+    background-color: crimson;
+    width: fit-content;
+    color: white;
+    text-shadow: 0 0 5px white;
+    padding: 1px 7px;
+    border-radius: 10px;
+    border: 2px solid brown;
+    position: absolute;
+    top: -15px;
+    left: -0px;
+    font-size: 15px;
+}

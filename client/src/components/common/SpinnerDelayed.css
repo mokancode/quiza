@@ -1,0 +1,115 @@
+.spinnerDelayedDiv  {
+    /* display: none; */
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid white; */
+    /* margin-left: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    position: relative;
+}
+
+.spinnerDelayedDiv .rotator {
+    position: absolute;
+    transform-origin: center;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid rgb(28, 89, 150); */
+    border-top: 1px solid rgb(55, 247, 247);
+    border-bottom: 1px solid rgb(55, 247, 247);
+    opacity: 0;
+}
+
+.spinnerDelayedDiv .rotator:nth-child(1) {
+    box-shadow: 
+    0 0 10px 0 rgba(29, 255, 240, 0.2)
+    , inset 1px 1px 1px 0 rgb(25, 36, 255)
+    , inset -1px -1px 1px 0 rgb(174, 243, 164)
+    , inset -1px -1px 10px 0 rgba(174, 233, 186, 0.3)
+    , 1px 0 2px 0 rgb(106, 199, 245, 0.7)
+    , -1px -1px 2px 0 rgb(133, 190, 240, 0.3)
+    ;
+    border-top: 1.5px solid rgb(55, 247, 247);
+}
+
+
+.spinnerDelayedDiv .rotator:nth-child(2) {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+}
+
+.spinnerDelayedDiv .rotator:nth-child(3) {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-top: 1px solid rgb(55, 247, 247);
+    border-bottom: 1px solid rgb(55, 247, 247);
+}
+
+.spinnerDelayedDiv .rotator:nth-child(4) {
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border-top: 1px solid rgb(55, 247, 247);
+    border-bottom: 1px solid rgb(55, 247, 247);
+}
+
+.spinnerDelayedDivShow .rotator:nth-child(1){animation: 2s spinnerRotate infinite linear, .5s showRotator 0.8s 1 ease-in-out forwards, 1.2s changeSize 1 forwards alternate ease-in-out;}
+.spinnerDelayedDivShow .rotator:nth-child(2){animation: 1.5s spinnerRotate infinite linear reverse, .2s showRotator .6s ease-in-out normal forwards;}
+.spinnerDelayedDivShow .rotator:nth-child(3){animation: 1s spinnerRotate infinite linear, .2s showRotator .4s ease-in-out normal forwards;}
+.spinnerDelayedDivShow .rotator:nth-child(4){animation: 1s spinnerRotate infinite linear reverse, .2s showRotator 0s ease-in-out normal forwards, 2s changeSize infinite forwards alternate ease-in-out;}
+
+@keyframes changeSize {
+    0% {
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+    }
+    50% {
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
+    }
+}
+
+@keyframes spinnerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes showRotator {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.createQuizSpinner .spinnerDelayedDiv  {
+    margin-left: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.createQuizSpinner .spinnerDelayedDiv .rotator:nth-child(1) {
+}
+
+.createQuizSpinner .spinnerDelayedDiv .rotator:nth-child(2) {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+}
+
+.createQuizSpinner .spinnerDelayedDiv .rotator:nth-child(3) {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.createQuizSpinner .spinnerDelayedDiv .rotator:nth-child(4) {
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+}

@@ -1,0 +1,75 @@
+.tickIconSVG {
+    /* display: none !important; */
+    /* border: 1px solid red !important; */
+    transform: scale(1, 1.2) translateY(5px);
+    filter: 
+    drop-shadow(0px 1.5px 2px rgb(220, 220, 220))
+    ;
+    transition: 0.2s, 1s stroke-dashoffset;
+    /* stroke-dasharray: 1200;
+    stroke-dashoffset: 0; */
+
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+
+    width: 25px;
+    margin-left: 10px;
+    /* margin-top: -10px; */
+    animation: 2s tickIconAnim linear forwards infinite;
+}
+
+@keyframes tickIconAnim {
+    0% {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+    }
+    100% {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 1800;
+    }
+}
+
+.tickIconSVG:nth-child(1) {
+    /* display: none; */
+}
+
+.tickIconSVG:nth-child(2) {
+    animation: 2s tickIconAnim2 2s linear forwards infinite;
+    filter: 
+    drop-shadow(0px 0px 2px rgb(212, 255, 162))
+    drop-shadow(0px 0px 2px greenyellow)
+    ;
+}
+
+
+@keyframes tickIconAnim2 {
+    0% {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+    }
+    100% {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 1200;
+    }
+}
+
+/* .tickIconSVG:hover {
+    filter: 
+    drop-shadow(0px 0 2px rgb(122, 43, 43))
+    drop-shadow(0px 0 1px rgba(255, 255, 255, 0.9))
+    drop-shadow(0px 1.5px 2px rgb(106, 245, 93, 0.5))
+    drop-shadow(0px 0px 3px rgba(175, 175, 175, 0.7));
+} */
+
+.tickIconSVG .tickIconPath0 {
+    fill:transparent;
+    stroke: greenyellow;
+    stroke-width:15;
+    stroke-miterlimit:10;
+    stroke-linecap: round;
+    /* display: none; */
+}
+
+.tickIconSVG:nth-child(2) .tickIconPath0 {
+    stroke: greenyellow;
+}

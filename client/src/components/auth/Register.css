@@ -1,0 +1,433 @@
+.registerDiv {
+  /* border: 1px solid black; */
+  /* height: 100%; */
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* display: none; */
+  padding-bottom: 50px;
+}
+
+.registerHeader {
+  /* color: lightgray; */
+  color: rgb(8, 29, 66);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  animation-name: showFromBottom;
+  animation-duration: 500ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.parallax-effect {
+  transform-style: preserve-3d;
+  /* animation: none !important;
+    animation-name: none !important; */
+  /* border: 3px solid red !important; */
+}
+
+.inner-element {
+  transform: translateZ(50px);
+  /* border: 1px solid red; */
+}
+
+.registerFormWrapper {
+  animation-name: showFormFromRight;
+  animation-duration: 500ms;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  /* opacity: 0; */
+  /* border: 2px solid red; */
+}
+
+.registerForm {
+  /* display: none; */
+  background: linear-gradient(0deg, rgba(138, 163, 201, 0.7) 20%, rgba(114, 186, 207, 0.9) 80%);
+  box-shadow: 0 2px 30px 0px rgba(0, 0, 0, 0.1), 0px 20px 20px 0px rgba(0, 0, 0, 0.4), inset 0 0px 15px 0px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  border-radius: 20px;
+  padding: 25px 40px;
+  border-left: 1px solid rgb(239, 239, 240);
+  border-right: 1px solid rgb(239, 239, 240);
+  border-bottom: 1px solid rgb(239, 239, 240);
+}
+
+.registerForm form {
+  /* display: none; */
+  filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.3));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes rfSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+}
+
+@keyframes showFormFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: unset;
+  }
+}
+
+.inputAndErrorDivRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation-name: showFromLeft;
+  animation-duration: 500ms;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.inputAndErrorDivRegister:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+.inputAndErrorDivRegister:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+.inputAndErrorDivRegister:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+.inputAndErrorDivRegister:nth-of-type(5) {
+  animation-delay: 0.6s;
+}
+
+.inputAndErrorDivRegister .quizHelperDiv {
+  /* border: 1px solid red; */
+  width: 100%;
+  padding-left: 5px;
+}
+
+.inputLabelRegister {
+  width: 100% !important;
+  min-width: 100% !important;
+  /* text-align: left; */
+  /* border: 1px solid black; */
+}
+
+.inputLabelRegister {
+  animation-name: showFromRight;
+  animation-duration: 700ms;
+  animation-delay: 1.1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  text-shadow: 0 0 8px black;
+}
+
+.inputAndErrorDivRegister:nth-child(3) .inputLabelRegister {
+  animation-delay: 1s;
+}
+.inputAndErrorDivRegister:nth-child(4) .inputLabelRegister {
+  animation-delay: .9s;
+}
+.inputAndErrorDivRegister:nth-child(5) .inputLabelRegister {
+  animation-delay: .8s;
+}
+.inputAndErrorDivRegister:nth-child(6) .inputLabelRegister {
+  animation-delay: 0.7s;
+}
+
+@keyframes showFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes showFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes showFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-7px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes showNeutral {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .Tilt{
+    transform-style: preserve-3d !important;
+}
+
+.Tilt form {
+    transform: translateZ(20px) !important;
+} */
+
+.registerBtn {
+  /* background: linear-gradient(0deg, rgba(39, 62, 73, 0.9) 20%, rgba(107, 162, 226, 0.9) 120%) !important; */
+  background: linear-gradient(0deg, rgba(56, 86, 99, 0.9) 20%, rgba(159, 199, 255, 0.9) 120%) !important;
+  color: white;
+}
+
+.registerBtn::after {
+  /* background-image: linear-gradient(0deg, rgb(141, 157, 223) 20%, rgb(80, 93, 141) 120%); */
+  background-image: none;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.644);
+  content: "Sign up";
+}
+
+.registerErrorSpan {
+  /* position: unset !important; */
+  /* max-height: 0px; */
+  /* transform: rotate(360deg) !important; */
+  margin-top: 3px !important;
+  /* border: 2px solid yellow; */
+}
+
+.registerErrorSpan::before {
+  /* animation: unset !important; */
+  display: none;
+}
+
+.borderBoxContent {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid rgb(76, 43, 226);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  animation: 10s rotateBorderColor;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateBorderColor {
+  0% {
+  }
+  50% {
+    border: 2px solid rgb(43, 198, 226);
+  }
+  100% {
+    border: 2px solid rgb(76, 43, 226);
+  }
+}
+
+.borderBox .borderBoxContent h1 {
+  color: cyan;
+  font-size: 30px;
+  margin: 0 0 010px;
+  padding: 0;
+}
+
+.borderBox .borderBoxContent p {
+  color: white;
+}
+
+.borderBox span {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  /* display: block; */
+  /* box-sizing: border-box; */
+}
+
+.registerBorderBox span:nth-child(1) {
+  transform: rotate(0deg) scale(0.92, 1);
+  margin-top: 16px;
+}
+.registerBorderBox span:nth-child(2) {
+  transform: rotate(90deg) scale(1.01, 1);
+  margin-left: -34px;
+  margin-top: -1px;
+}
+.registerBorderBox span:nth-child(3) {
+  transform: rotate(180deg) scale(0.93, 1);
+  margin-top: -15px;
+}
+.registerBorderBox span:nth-child(4) {
+  transform: rotate(270deg) scale(1.01, 1);
+  /* margin-left: 19px; */
+  margin-top: -1px;
+  margin-left: 34px;
+}
+.registerBorderBox span:nth-child(2)::before {
+  animation-delay: -4s;
+}
+.registerBorderBox span:nth-child(4)::before {
+  animation-delay: -4s;
+}
+
+.registerBorderBox span::before {
+  content: "";
+  position: absolute !important;
+  width: 100%;
+  height: 1.5px;
+  /* background: #0093ff; */
+  /* background: rgb(76, 43, 226); */
+  /* background: rgb(43, 128, 226); */
+  /* background: rgb(70, 156, 255); */
+  background: rgb(70, 156, 255);
+  animation: 13s borderAnimation linear infinite;
+  /* animation: none; */
+  /* box-shadow: 0 0 5px 0 rgb(39, 187, 255); */
+  box-shadow: 0 0 5px 0 rgb(31, 34, 170);
+  transition: 3s;
+  opacity: 0;
+}
+
+.registerBorderBoxReady {
+  /* position: absolute;  */
+  /* min-width: 389px !important; */
+  /* height: 300px !important; */
+  /* border: 5px solid yellow !important; */
+}
+
+.registerBorderBoxReady span::before {
+  opacity: 1;
+}
+
+.registerBorderBox {
+  cursor: grab;
+  width: 100%;
+  width: fit-content;
+  height: 100% !important;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.registerBorderBox:hover {
+  box-shadow: none;
+}
+
+.registerSpinner {
+  margin-top: 15px;
+}
+
+.registrationSuccessfulDiv {
+  opacity: 0;
+  /* padding: 40px 50px !important; */
+  /* background: linear-gradient(0deg, rgba(138, 163, 201, 0.7) 20%, rgba(114, 186, 207, 0.9) 80%); */
+  background: linear-gradient(0deg, rgba(96, 123, 164, 0.99) 20%, rgba(105, 176, 196, 0.9) 80%);
+
+  box-shadow: 0 0px 50px 0px rgba(0, 0, 0, 0.2), 0px 20px 20px 0px rgba(0, 0, 0, 0.3), inset 0 0px 15px 0px rgba(0, 0, 0, 0.5);
+  padding: 40px 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+
+  /* display: none !important; */
+}
+
+.registrationSuccessfulDivSlideIn {
+  animation: 0.5s rsdSlideIn forwards !important;
+}
+
+@keyframes rsdSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.registrationSuccessfulDiv p {
+  text-shadow: 0 0 5px lightcyan;
+}
+
+@media screen and (max-width: 450px) {
+  .registerDiv {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .registerFormWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  /* .tiltRegisterForm {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin: 0px;
+        border: 2px solid black;
+    } */
+
+  .registerForm {
+    margin: 0px;
+    padding: 0;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /* border: 2px solid black; */
+  }
+
+  .registerForm input {
+    max-width: 95%;
+  }
+
+  .registerForm .inputAndErrorDivLogin {
+    padding: 0px 10px;
+    width: 90%;
+    /* border: 2px solid black; */
+  }
+
+  .registerForm .inputAndErrorDivRegister {
+    width: 90%;
+  }
+
+  .registerForm .registerBtn {
+    width: 80%;
+    min-width: unset;
+    /* border: 1px solid red; */
+  }
+
+  .registerHeader {
+    margin-bottom: 20px;
+  }
+}

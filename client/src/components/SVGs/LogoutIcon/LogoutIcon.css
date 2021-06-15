@@ -1,0 +1,69 @@
+.nav-item:nth-child(6) {
+    perspective: 1000px;
+}
+
+
+.nav-item:nth-child(6) button {
+    z-index: 3 !important;
+}
+
+
+.nav-item:nth-child(6) button {
+    opacity: 0;
+}
+
+.nav-item:nth-child(6):hover button {
+    opacity: 1;
+    transition: 0.5s 0.3s;
+}
+
+.nav-item:nth-child(6):hover .logoutIconSVG, .navGuestLinks .nav-item:nth-child(2):hover .logoutIconSVG {
+    transition: .5s ease-in-out !important;
+    stroke-dashoffset: 1700 !important
+}
+
+
+.logoutIconSVG {
+    /* display: none; */
+    z-index: -1;
+    width: 30px;
+    height: auto;
+    margin-top: -3px;
+    margin-left: -8px;
+    filter: drop-shadow(0 0 20px cyan);
+    transition: .5s .2s ease-in-out !important;
+    stroke-dasharray: 1700;
+    stroke-dashoffset: 0;
+}
+
+.logoutIconPath0{
+    fill:none;
+    /* stroke:rgb(193, 215, 223); */
+    stroke:rgb(162, 207, 223);
+    /* stroke:rgb(218, 218, 218); */
+    stroke-width:14;
+    stroke-miterlimit:10;
+
+}
+
+.logoutIconPath1{
+    /* display: none; */
+    /* fill: rgb(193, 215, 223); */
+    fill: none;
+    /* stroke:rgb(193, 215, 223); */
+    stroke:rgb(163, 219, 240);
+    stroke-width:13;
+    stroke-miterlimit:10;
+
+}
+
+/* guest Links */
+.navGuestLinks .nav-item:nth-child(2) .logoutIconSVG {
+    transition: .5s .2s ease-in-out, 0s transform, 0s margin-left, 0s margin-top !important;
+    transform: rotateY(180deg);
+}
+
+.navGuestLinks .nav-item:nth-child(2) .logoutIconPath1 {
+    transform-origin: center;
+    transform: rotateY(180deg) translateX(-300px);
+}

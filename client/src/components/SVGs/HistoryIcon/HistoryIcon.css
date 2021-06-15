@@ -1,0 +1,74 @@
+/* .nav-item:nth-child(2) a {
+    display: none !important;
+} */
+
+
+.nav-item a {
+    /* opacity: 0; */
+}
+
+.nav-item:nth-child(2) .historyIconSVG {
+    opacity: 0;
+    margin-top: -5px;
+    margin-left: -10px;
+    width: 30px !important;
+    height: 40px !important;
+    transform: scale(1, .9);
+    /* border: 3px solid cyan !important; */
+    stroke-dasharray: 1700;
+    /* stroke-dashoffset: 1700; */
+    stroke-dashoffset: 0;
+    transition: .6s ease-in-out 0.1s, 0s height, 0s width, 0s margin-top, 0s margin-left, 0s opacity 0s !important;
+    filter: drop-shadow(0 0 20px cyan);
+}
+
+.nav-item:nth-child(2):hover .historyIconSVG {
+    stroke-dashoffset: 1700;
+}
+
+.nav-item:nth-child(2):hover .historyIconPath1 {
+    stroke-dashoffset: 500;
+    transition: 0.5s;
+}
+
+.nav-item:nth-child(2):hover .historyIconPath0:nth-child(6) {
+    stroke-dashoffset: 1050;
+    transition: 0.5s;
+}
+
+.historyIconPath0{
+    fill:none;
+    /* stroke:rgb(0, 170, 255); */
+    stroke:rgb(193, 215, 223);
+    stroke-width:10;
+    stroke-miterlimit:10;
+}
+
+.historyIconPath0:nth-child(1) {
+    stroke-width:20;
+    /* stroke:rgb(164, 246, 255); */
+    stroke:rgb(177, 201, 213);
+}
+
+.historyIconPath0:nth-child(6) {
+    /* display: none; */
+    stroke-width:20;
+    stroke:rgb(164, 246, 255);
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 0;
+    transition: 0.5s 0.5s;
+    /* stroke: red; */
+}
+
+
+.historyIconPath1 {
+    /* display: none; */
+    fill:none;
+    stroke:rgb(139, 207, 250);
+    /* stroke:red; */
+    stroke-width:30;
+    stroke-miterlimit:10;
+    transition: 0.5s .7s;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+}

@@ -1,0 +1,29 @@
+.historyWrapper {
+    /* border: 2px solid yellow; */
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.historyHeader {
+    color: lightgray;
+    width: 100%;
+    padding-left: 20px;
+    /* border: 2px solid yellow; */
+}
+
+.loadingQuizzesParagraph {
+    color: black;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.historyErrors {
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(18, 33, 56);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 20px 0px rgba(0, 0, 0, .3)
+    , 0px 10px 10px 0px rgba(0, 0, 0, .1)
+    , inset 0 0px 5px 0px rgba(0, 0, 0, .5)
+    ;
+}

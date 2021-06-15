@@ -1,0 +1,53 @@
+.searchIconSVG {
+    /* display: none; */
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 20px cyan);
+    margin-left: -20px;
+    margin-top: -8px;
+    transform: scale(.8, .8) rotate(-45deg) !important;
+    /* transform: scale(.8, .8) rotate(-90deg) !important; */
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 0;
+    transition: 0.5s 0.3s ease-in-out, 0s transform, 0s margin-left, 0s margin-top !important;
+}
+
+.nav-item:nth-child(5):hover .searchIconSVG, .navGuestLinks .nav-item:nth-child(1):hover .searchIconSVG {
+    stroke-dashoffset: 1200 !important;
+    transition: 0.5s ease-in-out !important;
+}
+
+.navGuestLinks .nav-item:nth-child(1) .searchIconSVG {
+    /* border: 2px solid white !important; */
+    transition: 0.5s 0.3s ease-in-out, 0s transform, 0s margin-left, 0s margin-top !important;
+}
+
+.searchIconPath0{
+    fill:none;
+    stroke:rgb(193, 215, 223);
+    stroke:rgb(133, 222, 255);
+    stroke-width:20;
+    stroke-miterlimit:10;
+    /* display: none; */
+}
+
+.searchIconPath1{
+    fill:none;
+    stroke:rgb(193, 215, 223);
+    /* stroke:rgb(133, 222, 255); */
+    stroke-width:20;
+    stroke-miterlimit:10;
+}
+
+.searchIconPath2{
+    fill:none;
+    /* stroke:rgb(193, 215, 223); */
+    stroke:rgb(160, 228, 253);
+    stroke-width:20;
+    stroke-miterlimit:10;
+    /* display: none; */
+}
+
+.searchIconSVG path:nth-child(1) {
+    display: none;
+}

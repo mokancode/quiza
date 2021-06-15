@@ -1,0 +1,40 @@
+.starContainer {
+  display: flex;
+  /* border: .5px solid blue; */
+  width: 35px;
+  height: 30px;
+  margin: 0 5px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.starContainer .leftHalf,
+.starContainer .rightHalf {
+  display: flex;
+  /* border: 1px solid orange; */
+  width: 50%;
+  /* display: none; */
+  z-index: 3;
+}
+
+.starContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: 0.2s;
+}
+
+.starContainer:not(.starDisplayContainer) img {
+  filter: drop-shadow(0 0 5px gold);
+  opacity: 0;
+}
+
+.starContainer img.show {
+  opacity: 1;
+}
+
+.starContainer .fullRatingStar {
+  z-index: 3;
+}

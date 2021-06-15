@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Allura|Italiana|Montserrat|Philosopher|Playball|Poiret+One|Quicksand|Sofia&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+p { margin: 0px; }
+
+.App {
+    padding: 30px;
+    /* height: 100%; */
+    
+}
+
+.mContainerWrapper {
+    /* display: flex; */
+    width: 100%;
+    /* border: 5px solid turquoise; */
+}
+
+.mContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* min-width: fit-content; */
+    /* max-width: 100vw !important;  */
+    /* min-height: 100%; */
+    /* height: 100vh; */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    /* height: 100vmax; */
+    /* height: fit-content; */
+    /* border: 5px solid red; */
+    /* width: 1500px; */
+    /* width: 100vw; */
+}
+
+.navbarRouteContainer {
+    /* display: none; */
+    height: 7vh;
+    /* width: 300px; */
+    /* border: 2px solid black; */
+}
+
+.routesContainer {
+    display: flex;
+    /* display: none; */
+    /* background: radial-gradient(ellipse at center, #1e5799 0%,#2989d8 0%,#243a44 100%); */
+    background-size: 400%;
+    min-height: 93vh;
+    /* border: 3px solid yellow; */
+    /* overflow-x: hidden; */
+}
+
+.routesContainerSideBar {
+    display: flex;
+    z-index: 50;
+    /* width: 300px; */
+    flex-basis: 10%;
+    /* border: 3px solid red; */
+}
+
+.routesContainerInner {
+    display: flex;
+    /* display: none; */
+    /* padding: 20px; */
+    /* background-color: #01628f69; */
+    background-color: #d8d8d869;
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.5);
+    /* padding-top: 20px; */
+    margin: 15px;
+    border-radius: 10px;
+    z-index: 2;
+    /* flex-basis: 90%; */
+    flex-basis: 100%;
+    /* width: 97vw; */
+    /* max-width: 97w; */
+    /* max-width: 90%; */
+    /* border: 3px solid blue; */
+    /* max-width: 87vw; */
+}
+
+.routesContainerInner * {
+    /* display: none; */
+}
+
+
+.spinnerDiv {
+    background: transparent!important;
+}
+
+@media screen and (max-width: 420px) {
+    .navbarRouteContainer {
+        border: 2px solid yellow !important;
+        /* width: 100%; */
+        /* width: 100vw; */
+        /* padding: 0 !important; */
+        /* margin: 0 !important; */
+        z-index: 2;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        /* width: 100%; */
+    }
+    
+    .mContainer {
+        margin: 0px !important;
+        padding: 0 !important;
+    }
+    
+    .routesContainer {
+        /* display: none; */
+        /* max-width: 100vw !important; */
+        /* overflow: hidden; */
+        /* border: 2px solid blue; */
+        min-height: 100vh;
+    }
+    
+    .routesContainerInner {
+        /* flex-basis: unset !important; */
+        max-width: 100vw;
+        margin: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        z-index: 1;
+        padding-top: 10px;
+        /* border: 2px solid red; */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .routesContainer {
+        /* display: none; */
+    }
+    
+    .navbarRouteContainer {
+        /* display: none; */
+        /* border: 2px solid orangered; */
+        /* width: 100vw !important; */
+        /* padding: 0 !important; */
+        /* margin: 0 !important; */
+    }
+    
+    .navbarRouteContainer * {
+        /* display: none; */
+        /* overflow-x: hidden; */
+    }
+    
+    .navbarRouteContainer * {
+        /* margin: 0 !important; */
+        /* padding: 0 !important; */
+    }
+    
+}
+
+#appVerWrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: 3;
+    /* border: 2px solid black; */
+    user-select: none;
+}
+
+#appVer {
+    margin: 0px;
+    color: darkblue;
+    transition: .2s;
+    transform-origin: right;
+    /* transform: rotateY(90deg) perspective(300px); */
+    transform: translateX(-100%);
+    /* border: 1px solid cornflowerblue; */
+}
+
+#appVerWrapper:hover #appVer {
+    transform: unset;
+}

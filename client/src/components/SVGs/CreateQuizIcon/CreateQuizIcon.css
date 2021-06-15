@@ -1,0 +1,62 @@
+/* .nav-item:nth-child(4) p {
+    display: none;
+} */
+
+.createQuizIconSVG {
+    width:50px;
+    height: 45px;
+    margin-left: -20px;
+    margin-top: -8px;
+    transform: scale(.9, 0.85);
+    filter: drop-shadow(0 0 20px cyan);
+    transition: 0.5s ease-in-out 0.3s, 0s margin-left, 0s margin-top, 0s transform, 0s width, 0s height, 0s border !important;
+    stroke-dasharray: 1700;
+    stroke-dashoffset: 0;   
+    /* border: 1px solid white; */
+}
+
+.nav-item:nth-child(4):hover .createQuizIconSVG {
+    stroke-dashoffset: 1700;
+    transition: 0.5s ease-in-out !important;
+}
+
+.nav-item:nth-child(4):hover .createQuizIconPath0:nth-child(6) {
+    stroke-dashoffset: 1010;
+    transition: 1s;
+}
+
+.nav-item:nth-child(4):hover .createQuizIconPath1 {
+    stroke-dashoffset: 250;
+    transition: .5s;
+}
+
+
+.createQuizIconPath0{
+    fill:none;
+    stroke:rgb(190, 255, 255);
+    stroke-width:15;
+    stroke-miterlimit:10;
+}
+
+.createQuizIconPath0:nth-child(1) {
+    stroke:rgb(177, 201, 213);
+}
+
+.createQuizIconPath0:nth-child(6) {
+    /* display: none; */
+    stroke-dasharray: 1010;
+    stroke-dashoffset: 0;
+    transition: 0.5s 0.5s;
+}
+
+.createQuizIconPath1{
+    /* display: none; */
+    fill:none;
+    /* stroke:rgb(190, 255, 255); */
+    stroke:rgb(139, 207, 250);
+    stroke-width:30;
+    stroke-miterlimit:10;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+    transition: 0.5s .8s;
+}

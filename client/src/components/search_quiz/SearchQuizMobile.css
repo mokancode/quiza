@@ -1,0 +1,220 @@
+@media only screen and (max-width: 1536px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions {
+        /* top: 210px; */
+    }
+    .courseTitlesSuggestions { 
+        /* top:274px !important; */
+        /* background: black; */
+    }
+    .schoolNamesSuggestions {
+        /* top:403px !important; */
+        /* background: black; */
+    }
+}
+
+/* If below 1300px */
+@media only screen and (max-width: 1358px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions {
+        /* top: 200px !important; */
+        top: 236px;
+        /* background: black; */
+    }
+    
+    .schoolNamesSuggestions {
+        /* top:430px; */
+        /* background: black; */
+    }
+}
+@media only screen and (max-width: 992px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions{
+        top: 223px;
+        /* background: black; */
+    }
+    
+    .schoolNamesSuggestions  {
+        /* top: 417px;     */
+        /* background: black; */
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions{
+        top: 220px;
+        /* background: black; */
+    }
+    
+    .schoolNamesSuggestions  {
+        /* top: 417px !important;     */
+        /* background: black; */
+    }
+}
+
+
+@media only screen and (max-width: 938px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions {
+        top: 236px;
+        /* background: black; */
+    }
+    .schoolNamesSuggestions {
+        /* top: 430px !important;     */
+    }
+}
+@media only screen and (max-width: 576px) {
+    .courseCodeLettersSuggestions, .courseCodeDigitsSuggestions {
+        top: 252px;
+        /* background: black; */
+    }
+    
+    .schoolNamesSuggestions {
+        /* top: 446px !important; */
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .searchQuizDiv {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: unset;
+        opacity: 0;
+        min-width: unset;
+        width: 100% !important;
+        /* border: 2px solid black; */
+    }
+    
+    .searchQuizDiv * {
+        /* display: none; */
+    }
+    
+    .searchQuizDivInnerWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: center !important;    
+        height: 100%;
+        border-radius: 10px;
+        width: 100% !important;
+        /* border: 1px solid green !important; */
+    }
+    
+    .searchFormDiv {
+        /* border: 2px solid black; */
+        width: 100%;
+        margin: 0px !important;
+        padding: 15px !important;
+    }
+    
+    .searchQuizDivInnerWrapper .inputLabel {
+        /* display: none; */
+    }
+    
+    .submitBtn {
+        /* display: none; */
+    }
+    
+    .inputAndErrorDiv {
+        /* display: none; */
+    }
+    
+    .termSelectDiv {
+        /* display: none !important; */
+    }
+    
+    .courseCodeDiv {
+        /* display: none; */
+        /* border: 1px solid white; */
+        /* width: 50%; */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .searchQuizDiv {
+        padding: 0 !important;
+        padding-top: 20px !important;
+        margin: 0 !important;
+        padding-bottom: 50px !important;
+        /* border: 2px solid green; */
+    }
+    
+    .searchQuizDiv .searchQuizDivInnerWrapper {
+        /* border: 2px solid black; */
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    .searchQuizDiv .searchFormDiv .submitBtn {
+        /* display: none; */
+        width: 100%;
+    }
+    
+    .searchQuizDiv .searchFormDiv .submitBtn::after {
+        width: inherit;
+    }
+    
+    .searchQuizDiv .searchFormDiv {
+        /* border: 2px solid red; */
+        /* width: 100% !important; */
+        width: 95vw !important;
+    }
+    
+    .courseCodeDivWrapper {
+        width: 100%;
+    }
+    
+    .searchQuizDiv .searchFormDiv .inputAndErrorDiv input[name^="courseTitle"], 
+    .searchQuizDiv .searchFormDiv .inputAndErrorDiv input[name^="schoolName"],
+    .searchQuizDiv .searchFormDiv .inputAndErrorDiv input[name^="quizCreatorName"],
+    .searchQuizDiv .searchFormDiv .inputAndErrorDiv input[name^="searchableId"]
+    {
+        /* border: 1px solid black !important; */
+        width: 100% !important;
+    }
+    
+    .searchQuizDiv .inputAndErrorDiv {
+        padding-left: 0px !important;
+    }
+    
+    .searchQuizDiv .courseCodeDiv {
+        padding-left: 0px !important;
+    }
+    
+    .courseCodeDivWrapper .inputAndErrorDiv:nth-child(3) {
+        margin-left: 5px !important;
+    }
+    
+    .courseCodeDivWrapper .inputAndErrorDiv:nth-child(1) {
+        /* border: 2px solid white; */
+        /* margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important; */
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-right: 5px !important;
+        width: unset !important;
+        min-width: unset !important;
+        
+    }
+    
+    .courseCodeDivWrapper .inputAndErrorDiv:nth-child(1) input {
+        /* display: none; */
+        /* border: 2px solid red; */
+        margin: 0px !important;
+    }
+    
+    .courseCodeDivWrapper .inputAndErrorDiv {
+        /* border: 2px solid blue; */
+    }
+    
+    .courseCodeDivWrapper .dash {
+        /* display: none; */
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    
+    .selectFieldsOfStudy {
+        margin-right: 0 !important;
+    }
+    
+}

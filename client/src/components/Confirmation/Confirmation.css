@@ -1,0 +1,239 @@
+.accountConfirmationDiv {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    /* border: 2px solid red; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+}
+
+.confirmationDivInner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(0deg, rgba(126, 161, 214, 0.8) 20%, rgb(120, 136, 184, 0.7) 80%) !important;
+    /* background: linear-gradient(0deg, rgba(96, 123, 164, 0.99) 20%, rgba(105, 176, 196, 0.9) 80%); */
+    animation-name: showFromRight;
+    animation-duration: 500ms;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transition: 0ms opacity, 1s min-height cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+    box-shadow: 0 0px 50px 0px rgba(0, 0, 0, .2)
+    , 0px 20px 20px 0px rgba(0, 0, 0, .3)
+    , inset 0 0px 15px 0px rgba(0, 0, 0, .5)
+    ;
+    padding: 20px 60px !important;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* border: 2px solid black; */
+}
+
+.confirmationMsg {
+    color: lightcyan;
+    font-weight: lighter;
+    font-size: 20px;
+    /* border: 2px solid red; */
+}
+
+.confirmationMsgDiv {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.verifyingAccountParagraphDiv {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.verifyingAccountParagraphDiv .threeDotsDiv {
+    display: flex;
+}
+
+.verifyingAccountParagraphDiv .threeDotsDiv span {
+    width: 3px;
+    height: 3px;
+    
+    margin-top: -6px;
+    margin-left: 5px;
+    background-color: lightcyan;
+    border-radius: 100px;
+}
+
+.verifyingAccountParagraphDiv .threeDotsDiv span {
+    animation-name: threeDotAnim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.verifyingAccountParagraphDiv .threeDotsDiv span:nth-child(1) {
+    animation-name: threeDotAnim1; 
+    animation-delay: 0s;
+}
+.verifyingAccountParagraphDiv .threeDotsDiv span:nth-child(2) {
+    animation-name: threeDotAnim2; 
+    animation-delay: .15s;
+}
+.verifyingAccountParagraphDiv .threeDotsDiv span:nth-child(3) {
+    animation-name: threeDotAnim3; 
+    animation-delay: .25s;
+}
+
+@keyframes threeDotAnim1 {
+    0% {
+        transform: translateX(0px);
+    }
+    10% { 
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes threeDotAnim2 {
+    0% {
+        transform: translateX(0px);
+    }
+    10% { 
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes threeDotAnim3 {
+    0% {
+        transform: translateX(0px);
+    }
+    10% { 
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.loadingBarsWrapper {
+    margin-top: 10px;
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+
+.loadingBarsWrapper span {
+    background-color: lightcyan;
+    box-shadow: 
+    0 0 5px 0 lightcyan
+    ;
+    height: 0px;
+    width: 3px;
+    border-radius: 100px;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    /* border: 2px solid red; */
+}
+
+.loadingBarsWrapper span:not(:first-child) { margin-left: 3.5px; }
+
+.loadingBarsWrapper span:nth-child(3) {
+    /* height: 100%; */
+}
+
+@keyframes loadingBarAnim {
+    0% {
+        filter: hue-rotate(0deg);
+        height: 0px;
+    }
+    50% {
+        filter: hue-rotate(360deg);
+        height: 50px
+    }
+    100% {
+        filter: hue-rotate(0deg);
+        height: 0px;
+    }
+}
+
+.loadingBarsWrapperStartAnim span {
+    animation-duration: 1s;
+    animation-name: loadingBarAnim;
+}
+
+.loadingBarsWrapperStartAnim span:nth-child(1) {animation-delay: 0.2s;}
+.loadingBarsWrapperStartAnim span:nth-child(2) {animation-delay: 0.3s;}
+.loadingBarsWrapperStartAnim span:nth-child(3) {animation-delay: 0.4s;}
+.loadingBarsWrapperStartAnim span:nth-child(4) {animation-delay: 0.5s;}
+.loadingBarsWrapperStartAnim span:nth-child(5) {animation-delay: 0.6s;}
+
+.loadingBarsWrapperReverseAnim span {
+    animation-duration: 1s;
+    animation-name: loadingBarAnim;
+}
+
+.loadingBarsWrapperReverseAnim span:nth-child(1) {animation-delay: 0.4s;}
+.loadingBarsWrapperReverseAnim span:nth-child(2) {animation-delay: 0.3s;}
+.loadingBarsWrapperReverseAnim span:nth-child(3) {animation-delay: 0.2s;}
+.loadingBarsWrapperReverseAnim span:nth-child(4) {animation-delay: 0.1s;}
+.loadingBarsWrapperReverseAnim span:nth-child(5) {animation-delay: 0s;}
+
+.loadingBarsWrapperRepeatAnim span {
+    animation-name: loadingBarAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loadingBarsWrapperRepeatAnim span:nth-child(1) {animation-delay: 0.5s;}
+.loadingBarsWrapperRepeatAnim span:nth-child(2) {animation-delay: 0.3s;}
+.loadingBarsWrapperRepeatAnim span:nth-child(3) {animation-delay: 0.0s;}
+.loadingBarsWrapperRepeatAnim span:nth-child(4) {animation-delay: 0.3s;}
+.loadingBarsWrapperRepeatAnim span:nth-child(5) {animation-delay: 0.5s;}
+
+.accountVerifiedMsgDiv {
+    margin-left: -25px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}
+
+@media screen and (max-width: 400px) {
+    .accountVerifiedMsgDiv {
+        align-items: center;
+        justify-content: center;
+        
+        /* flex-direction: column; */
+    }
+    
+    .accVerifiedTickIconsDiv svg {
+       top: -15px !important;
+    }
+}
+
+.accVerifiedTickIconsDiv {
+    position: relative;
+}
+
+.accVerifiedTickIconsDiv svg {
+    position: absolute;
+    top: -7px;
+}
+
+.verificationError {
+    color: lightcyan;
+    text-shadow: 0 0 5px lightcyan;
+}

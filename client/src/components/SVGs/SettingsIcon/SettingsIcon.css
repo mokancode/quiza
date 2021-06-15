@@ -1,0 +1,75 @@
+.nav-item:nth-child(3) .navbarIconWrapper {
+    width: 50px;
+    height: 40px;
+    /* border: 1px solid white !important; */
+    margin-top: -5px;
+    margin-left: -28px;
+}
+
+.nav-item:nth-child(3):hover .settingsIconSVG:nth-child(1) {
+    transform: rotate(-180deg);
+    stroke-dashoffset: 2450;
+}
+
+.nav-item:nth-child(3):hover .settingsIconSVG:nth-child(2) {
+    transform: rotate(180deg);
+    stroke-dashoffset: 2450;
+}
+
+.settingsIconSVG {
+    /* border: 1px solid white; */
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    filter: drop-shadow(0 0 20px cyan);
+    stroke-dasharray: 2450;
+    stroke-dashoffset: 0;
+
+    /* animation-name: settingsAnim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal; */
+    /* animation: 2s settingsAnim forwards ease-in-out;    */
+}
+
+.settingsIconSVG:nth-child(1) {
+    width: 25px;
+    top: 0px;
+    left: 15px;
+    transition: 1s ease-in-out !important;
+    /* transform: rotate(-180deg); */
+}
+
+.settingsIconSVG:nth-child(2) {
+    width: 20px;
+    top: 4px;
+    left: 38px;
+    transition: 1s ease-in-out !important;
+    /* transform: rotate(180deg); */
+}
+
+
+.settingsIconPath0 {
+    fill:none;
+    stroke:rgb(190, 255, 255);
+    stroke-width:17;
+    stroke-miterlimit:10;
+}
+
+@keyframes settingsAnim {
+    0% {
+        transform: rotate(0deg);
+        stroke-dasharray: 2450;
+        stroke-dashoffset: 2450;
+    }
+    50% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        transform: rotate(-360deg);
+        stroke-dasharray: 2450;
+        stroke-dashoffset: 0;
+    }
+}
