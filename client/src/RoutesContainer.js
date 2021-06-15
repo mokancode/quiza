@@ -22,13 +22,14 @@ import "react-app-polyfill/ie11";
 import Confirmation from "./components/Confirmation/Confirmation";
 import axios from "axios";
 import ResetPassword from "./components/auth/ResetPassword/ResetPassword";
+import isEmpty from "./validation/is-empty";
 
 export class RoutesContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      appVer: "1.0.0.0", // Front-end version
+      appVer: "1.0.0.1", // Front-end version
       apiVer: "", // Back-end (API) version
     };
   }
@@ -55,9 +56,8 @@ export class RoutesContainer extends Component {
       <div className="mContainerWrapper">
         <div className="mContainer">
           <div id="appVerWrapper">
-            <p id="appVer">
-              v{appVer}, API v{apiVer}
-            </p>
+            <p className="appVer">v{appVer}</p>
+            {!isEmpty(apiVer) && <p className="appVer">, API v{apiVer}</p>}
           </div>
 
           {/* <button type='button' onClick={this.testMe}>Test State</button> */}

@@ -161,21 +161,23 @@ p { margin: 0px; }
     bottom: 0px;
     left: 0px;
     overflow: hidden;
+    width: 105%;
     z-index: 3;
-    /* border: 2px solid black; */
     user-select: none;
+    display: flex;
+    /* border: 2px solid black; */
 }
 
-#appVer {
+.appVer {
     margin: 0px;
     color: darkblue;
     transition: .2s;
     transform-origin: right;
     /* transform: rotateY(90deg) perspective(300px); */
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     /* border: 1px solid cornflowerblue; */
 }
 
-#appVerWrapper:hover #appVer {
-    transform: unset;
+#appVerWrapper:hover .appVer {
+    transform: translateX(5%);
 }
